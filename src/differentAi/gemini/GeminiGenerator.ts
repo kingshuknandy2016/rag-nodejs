@@ -71,15 +71,19 @@ export const generate = async (input: InputPrompt) => {
     }
 }
 
-// Example usage
-const result = await generate({
-    prompt: 'Write a travel itinerary for 3 days in Goa',
+async function main() {
+    // Example usage
+    const result = await generate({
+        prompt: 'Write a travel itinerary for 3 days in Goa',
     lines: 10,
     context: 'Travel itinerary',
     role: 'Travel agent'
 });
 
-console.log('Generated Text:');
-console.log(result.text);
-console.log('\nToken Usage:');
-console.log(result.tokenUsage);
+    console.log('Generated Text:');
+    console.log(result.text);
+    console.log('\nToken Usage:');
+    console.log(result.tokenUsage);
+}
+
+main();

@@ -9,6 +9,10 @@
     "start:basic": "ts-node src/basicV1/entrypoint.ts",
     "start:basicV2": "ts-node src/basicV2/entrypoint.ts",
     "start:chroma": "ts-node src/vectorStores/chromadb/basicUsage.ts",
+    "start:pinecone": "ts-node src/vectorStores/pinecone/basicUsage.ts",
+    "start:deepSeekR1_Zero": "ts-node src/differentAi/deepSeekR1_Zero/basicUsage.ts",
+    "start:gemini": "ts-node src/differentAi/gemini/GeminiGenerator.ts",
+    "start:geminiOpenAPI": "ts-node src/differentAi/gemini/GeminiUsingOpenAPI.ts",
     "build": "tsc",
     "watch": "tsc -w"
   },
@@ -17,6 +21,7 @@
     "@langchain/community": "^0.3.39",
     "@langchain/core": "^0.3.43",
     "@langchain/google-genai": "^0.2.2",
+    "@pinecone-database/pinecone": "^5.1.1",
     "@xenova/transformers": "^2.17.2",
     "chromadb": "^2.2.0",
     "chromadb-default-embed": "^2.14.0",

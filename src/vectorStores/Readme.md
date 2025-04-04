@@ -11,3 +11,6 @@ To start the server, run:
 docker run -v ./chroma-data:/data -p 8000:8000 chromadb/chroma
 ```
 This starts the server with the default configuration and stores data in ./chroma-data (in your current working directory).
+
+## Pine Cone
+Access the pinecone from https://app.pinecone.io/

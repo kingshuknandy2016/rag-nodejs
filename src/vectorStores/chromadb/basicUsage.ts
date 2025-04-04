@@ -1,7 +1,8 @@
 import { ChromaClient, Collection, IncludeEnum } from "chromadb";
 import { DefaultEmbeddingFunction } from "chromadb";
 
-const client = new ChromaClient();
+
+const client = new ChromaClient({path: process.env.CHROMA_DB_URL});
 const defaultEF = new DefaultEmbeddingFunction();
 
 interface DocumentMetadata {
@@ -67,7 +68,9 @@ async function checkVectorSize(collectionName: string) {
 async function main() {
     try {
         const collectionName = "my_collection";
-        
+
+        const heartbeat = await client.heartbeat();
+        console.log("Heartbeat:", heartbeat);
         // Step 0: Try to delete the collection if it exists
         try {
             await client.deleteCollection({ name: collectionName });
