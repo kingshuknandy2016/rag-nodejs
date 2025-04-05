@@ -13,6 +13,7 @@
     "start:deepSeekR1_Zero": "ts-node src/differentAi/deepSeekR1_Zero/basicUsage.ts",
     "start:gemini": "ts-node src/differentAi/gemini/GeminiGenerator.ts",
     "start:geminiOpenAPI": "ts-node src/differentAi/gemini/GeminiUsingOpenAPI.ts",
+    "start:advanced1": "ts-node src/advanced1/main.ts",
     "build": "tsc",
     "watch": "tsc -w"
   },
@@ -26,7 +27,9 @@
     "chromadb": "^2.2.0",
     "chromadb-default-embed": "^2.14.0",
     "dotenv": "^16.4.7",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "langchain": "^0.0.178",
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
